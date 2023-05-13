@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="activity_privacy_policy_title">Politique de Confidentialité</string>
+    <string name="activity_preference_title">Préférences</string>
+    <string name="frg_info_title">Info</string>
+    <string name="frg_client_title">Recevoir fichier</string>
+    <string name="frg_server_title">Envoyer fichier</string>
+
+    <string name="pref_privacy_policy">Politique de Confidentialité</string>
+    <string name="pref_contact">Contact</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Acheter la version sans publicités?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">montrez que vous aimez cet app :)</string>
+
+    <string name="pref_sku_no_ads_owned_title">Version sans publicités débloquée.</string>
+    <string name="pref_sku_no_ads_owned_summary">Merci pour votre soutient</string>
+
+    <string name="pref_app_version_title">Application version</string>
+
+    <string name="pref_destination_directory_title">Dossier de destination</string>
+    <string name="pref_destination_directory_android_summary">les fichiers seront placés dans un des dossiers d\'android media (Documents, Pictures, Movies or Music) en fonction de l\'extension du fichier</string>
+    <string name="pref_destination_directory_summary">les fichiers seront placés dans le dossier -> %s</string>
+
+    <string name="pref_app_rating_title">Donner votre avis?</string>
+    <string name="pref_app_rating_summary">laisser nous votre avis and informer les autres utilisateurs de vos sentiments concernant cette application</string>
+
+    <string name="pref_app_share_title">Partager application</string>
+    <string name="pref_app_share_summary">partager application avec un ami? envoyer un lien direct pour télécharger cette application</string>
+
+    <string name="pref_server_auto_select_file_title">Server auto-select fichier</string>
+    <string name="pref_server_auto_select_file_summary">Demande fichier dés l\'ouverture de la page ou quand le serveur est démarré</string>
+
+    <string name="pref_server_auto_start_title">Serveur auto-start</string>
+    <string name="pref_server_auto_start_summary">Démarre le serveur dés qu\'un fichier est séléctionné</string>
+
+    <string name="pref_server_auto_stop_title">Server auto-stop</string>
+    <string name="pref_server_auto_stop_summary">Arrête le serveur dés que le transfert est fini</string>
+
+    <string name="pref_server_auto_search_title">Serveur auto-search</string>
+    <string name="pref_server_auto_search_summary">Recherche le serveur automatiquement</string>
+
+    <string name="pref_overwrite_file_title">Écraser fichier</string>
+    <string name="pref_overwrite_file_summary">Quand reçoit fichier, écraser fichier si présent</string>
+
+    <string name="cny_title">Réseau:</string>
+    <array name="cny_state">
+        <item>Non Disponible</item>
+        <item>Wifi</item>
+        <item>Data</item>
+        <item>HotSpot</item>
+        <item>Inconnu</item>
+    </array>
+
+    <string name="menu_send_title">Envoyer</string>
+    <string name="menu_receive_title">Recevoir</string>
+    <string name="menu_info">Info</string>
+
+    <string name="sep_server">Serveur</string>
+    <string name="sep_client">Client</string>
+
+    <string name="sep_file">Fichier</string>
+    <string name="sep_file_receiving">Fichier en cours de réception…</string>
+    <string name="sep_file_received">Fichier réçu</string>
+    <string name="sep_file_to_send">Fichier à envoyer</string>
+    <string name="sep_file_sending">Envoi du fichier…</string>
+    <string name="sep_transfer">Progression</string>
+
+    <string name="txt_result_progress_not_started">…</string>
+    <string name="txt_result_progressing">Progressing…</string>
+    <string name="txt_result_progress_done">Terminé</string>
+    <string name="txt_result_progress_failed">Echec</string>
+    <string name="txt_result_progress_aborted">interrompu</string>
+
+    <string name="frm_inner_address_wait_start">attente start</string>
+    <string name="frm_inner_ip_wait_connect">attente connection</string>
+    <string name="frm_outer_address">Adresse</string>
+
+    <string name="frm_inner_port">xxxxx</string>
+    <string name="frm_outer_port">Port</string>
+
+    <string name="frm_inner_file_name_select">selectionner fichier</string>
+    <string name="frm_outer_file_name_select">Nom du fichier</string>
+
+    <string name="lbl_file_name_wait">attente nom du fichier</string>
+    <string name="lbl_folder_name_wait">attente nom du dossier</string>
+
+    <string name="lbl_folder_name">nom du dossier</string>
+    <string name="lbl_file_name">nom du fichier</string>
+
+    <array name="btn_server_start_txt">
+        <item>Start</item>
+        <item>Stop</item>
+    </array>
+
+    <array name="btn_server_search_start_txt">
+        <item>Start</item>
+        <item>Stop</item>
+    </array>
+
+    <!--    DIALOG SUGGEST BUY -->
+    <string name="lbl_banner_default">Achetez la version sans publicités ;)</string>
+    <string name="btn_maybe_later">Plus tard</string>
+    <string name="btn_buy">Acheter</string>
+    <string name="chk_do_not_show_again">Ne plus montrer</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">Achat interrompu</string>
+
+</resources>

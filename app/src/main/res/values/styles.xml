@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LedState">
+        <attr name="state_neutral" format="boolean" />
+        <attr name="state_busy" format="boolean" />
+        <attr name="state_succeed" format="boolean" />
+        <attr name="state_failed" format="boolean" />
+    </declare-styleable>
+
+    <!-- THEME -->
+    <style name="ThemeApplication" parent="ThemeNoActionBarLight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryLight</item>
+        <item name="colorSecondaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentLight">@color/colorAccentLight</item>
+        <item name="colorFaint">@color/colorFaint</item>
+        <item name="colorFaintDark">@color/colorFaintDark</item>
+        <item name="colorError">@color/colorError</item>
+
+        <item name="colorText">@drawable/state_text_color</item>
+        <item name="android:textColor">@drawable/state_text_color</item>
+        <item name="colorHint">@color/colorHint</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorBackground">@color/colorBackground</item>
+
+        <item name="navigationToolbarTheme">@style/ThemeWiferToolbarBottom</item>
+
+    </style>
+
+    <style name="ThemeWiferToolbarBottom" parent="ThemeToolbarBottom">
+        <item name="itemIconTint">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextColor">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextAppearanceActive">?attr/styleTextNorm</item>
+        <item name="itemTextAppearanceInactive">?attr/styleTextNorm</item>
+    </style>
+
+</resources>

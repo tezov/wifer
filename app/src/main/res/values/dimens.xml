@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="frm_port_width">105dp</dimen>
+    <dimen name="stp_width">14dp</dimen>
+    <dimen name="stp_height">40dp</dimen>
+    <dimen name="btn_server_start_width">140dp</dimen>
+    <dimen name="btn_size_min_txt">12sp</dimen>
+    <dimen name="btn_size_max_txt">24sp</dimen>
+    <dimen name="lbl_size_min_txt_connection_type">12sp</dimen>
+    <dimen name="lbl_size_max_txt_connection_type">20sp</dimen>
+    <dimen name="lbl_size_max_txt_banner_default">18sp</dimen>
+    <dimen name="lbl_size_max_txt_toolbar_default">24sp</dimen>
+</resources>

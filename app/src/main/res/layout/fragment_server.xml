@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tezov.lib_java_android.ui.layout.ScrollViewVertical xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="?attr/dimBorder_4"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:paddingEnd="?attr/dimBorder_4"
+    android:paddingBottom="?attr/dimBorder_4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+            android:layout_width="1dp"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tezov.wifer.view.LedState
+                android:id="@+id/stp_connection_type"
+                android:layout_width="@dimen/stp_width"
+                android:layout_height="@dimen/stp_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="?attr/dimPaddingElement_6"
+                android:background="@drawable/step_led_selector"
+                tools:background="@color/LightGray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_connection_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/dimPaddingElement_4"
+                    android:text="@string/cny_title"
+                    android:textAppearance="?attr/styleTextBig"
+                    app:autoSizeMaxTextSize="@dimen/lbl_size_max_txt_connection_type"
+                    app:autoSizeMinTextSize="@dimen/lbl_size_min_txt_connection_type"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toTopOf="@+id/lbl_connection_type"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_server_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_connection_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/dimPaddingElement_4"
+                    android:textAppearance="?attr/styleTextBig"
+                    app:autoSizeMaxTextSize="@dimen/lbl_size_max_txt_connection_type"
+                    app:autoSizeMinTextSize="@dimen/lbl_size_min_txt_connection_type"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_server_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_connection_title"
+                    tools:text="WIFI" />
+
+                <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+                    android:id="@+id/btn_server_start"
+                    style="@style/StyleButtonFlatIconText"
+                    android:layout_width="@dimen/btn_server_start_width"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    app:autoSizeMaxTextSize="@dimen/btn_size_max_txt"
+                    app:autoSizeMinTextSize="@dimen/btn_size_min_txt"
+                    app:autoSizeTextType="uniform"
+                    app:icon_array="@array/btn_server_start_img"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lbl_connection_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:text_array="@array/btn_server_start_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tezov.wifer.view.LedState
+                android:id="@+id/stp_server_start"
+                android:layout_width="@dimen/stp_width"
+                android:layout_height="@dimen/stp_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="?attr/dimPaddingElement_6"
+                android:background="@drawable/step_led_selector"
+                tools:background="@color/LightGray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="?attr/textInputTheme">
+
+                <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+                    android:id="@+id/frm_ip_server_layout"
+                    style="?attr/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:errorIconDrawable="@null"
+                    app:layout_constraintEnd_toStartOf="@+id/frm_port_server_layout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingEnd="?attr/dimPaddingElement_6"
+                    tools:helperText="helper text"
+                    tools:hint="hint text">
+
+                    <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+                        android:id="@+id/frm_server_address"
+                        style="?attr/textInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        app:hint_inner="@string/frm_inner_address_wait_start"
+                        app:hint_outer="@string/frm_outer_address"
+                        app:icon_mode="none"
+                        tools:text="192.168.0.1" />
+                </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+                <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+                    android:id="@+id/frm_port_server_layout"
+                    style="?attr/textInputLayoutStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="@dimen/frm_port_width"
+                    app:errorIconDrawable="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frm_ip_server_layout"
+                    tools:helperText="helper text"
+                    tools:hint="hint text">
+
+                    <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+                        android:id="@+id/frm_server_port"
+                        style="?attr/textInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        app:hint_inner="@string/frm_inner_port"
+                        app:hint_outer="@string/frm_outer_port"
+                        app:icon_mode="action"
+                        app:icon="@drawable/ic_refresh_24dp"
+                        tools:text="8080" />
+
+                </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/dimPaddingElement_6"
+            android:paddingBottom="?attr/dimPaddingElement_6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="?attr/dimPaddingElement_2"
+                android:layout_marginEnd="?attr/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorFaintDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sep_transfer"
+                android:textAppearance="?attr/styleTextLabel" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="?attr/dimPaddingElement_2"
+                android:layout_marginEnd="?attr/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorFaintDark" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tezov.wifer.view.LedState
+                android:id="@+id/stp_transfer_result"
+                android:layout_width="@dimen/stp_width"
+                android:layout_height="@dimen/stp_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="?attr/dimPaddingElement_6"
+                android:background="@drawable/step_led_selector"
+                tools:background="@color/LightGray" />
+
+            <RelativeLayout
+                android:id="@+id/container_bar_progress"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginEnd="?attr/dimPaddingElement_6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?attr/dimPaddingElement_6"
+            android:paddingBottom="?attr/dimPaddingElement_6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="?attr/dimPaddingElement_2"
+                android:layout_marginEnd="?attr/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorFaintDark" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_sep_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/styleTextLabel"
+                tools:text="@string/sep_file_to_send" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="?attr/dimPaddingElement_2"
+                android:layout_marginEnd="?attr/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorFaintDark" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+                    android:id="@+id/lbl_file_name_layout"
+                    android:theme="?attr/textInputTheme"
+                    style="?attr/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="false"
+                    app:errorIconDrawable="@null"
+                    android:layout_marginEnd="?attr/dimPaddingElement_6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_select_file"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:helperText="helper text"
+                    tools:hint="File Name">
+
+                    <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+                        android:id="@+id/lbl_file_name"
+                        style="?attr/textInputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        app:hint_inner="@string/frm_inner_file_name_select"
+                        app:hint_outer="@string/frm_outer_file_name_select"
+                        app:icon_mode="clear"
+                        tools:text="File Name" />
+
+                </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+                <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+                    android:id="@+id/btn_select_file"
+                    style="@style/StyleButtonFlatIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon_array="@array/btn_file_pick_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/lbl_file_name_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.tezov.lib_java_android.ui.layout.ScrollViewVertical>

@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifacts.applovin.com/android' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+//        classpath 'com.google.gms:google-services:4.3.10'
+        classpath "com.applovin.quality:AppLovinQualityServiceGradlePlugin:4.3.7"
+    }
+}
+//allprojects {
+//    tasks.withType(JavaCompile) {
+//        options.compilerArgs.add("-Xlint:unchecked")
+//        options.compilerArgs.add("-Xlint:deprecation")
+//    }
+//}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

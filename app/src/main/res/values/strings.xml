@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_email" translatable="false">tezov.app@gmail.com</string>
+
+    <string name="activity_privacy_policy_title">Privacy Policy</string>
+    <string name="activity_preference_title">Preferences</string>
+    <string name="frg_info_title">Info</string>
+    <string name="frg_client_title">Receive file</string>
+    <string name="frg_server_title">Send file</string>
+
+    <string name="pref_contact">Contact</string>
+    <string name="pref_privacy_policy">Privacy Policy</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Buy no ads version?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">show that you like this application</string>
+
+    <string name="pref_sku_no_ads_owned_title">No ads version unlocked</string>
+    <string name="pref_sku_no_ads_owned_summary">thanks for your support</string>
+
+    <string name="pref_app_version_title">Application version</string>
+
+    <string name="pref_app_rating_title">Give a review?</string>
+    <string name="pref_app_rating_summary">leave us your review and let other users how you feel about this application</string>
+
+    <string name="pref_app_share_title">Share application</string>
+    <string name="pref_app_share_summary">share application with a friend? send a direct link to download this application</string>
+
+    <string name="pref_destination_directory_title">Destination directory</string>
+    <string name="pref_destination_directory_android_summary">output files will be placed in one of android media directories (Documents, Pictures, Movies or Music) depending of the file extension</string>
+    <string name="pref_destination_directory_summary">files will be placed in the directory -> %s</string>
+
+    <string name="pref_server_auto_select_file_title">Server auto-select file</string>
+    <string name="pref_server_auto_select_file_summary">request file as soon as sender is opened or server is started</string>
+
+    <string name="pref_server_auto_start_title">Server auto-start</string>
+    <string name="pref_server_auto_start_summary">start server as soon as a file is selected</string>
+
+    <string name="pref_server_auto_stop_title">Server auto-stop</string>
+    <string name="pref_server_auto_stop_summary">stop server as soon as transfer is done</string>
+
+    <string name="pref_server_auto_search_title">Server auto-search</string>
+    <string name="pref_server_auto_search_summary">search server as soon as receiver is opened</string>
+
+    <string name="pref_overwrite_file_title">Overwrite file</string>
+    <string name="pref_overwrite_file_summary">when receive file, overwrite present file</string>
+
+    <string name="cny_title">Network</string>
+    <array name="cny_state">
+        <item>Not Available</item>
+        <item>Wifi</item>
+        <item>Data</item>
+        <item>HotSpot</item>
+        <item>Unknown</item>
+    </array>
+
+    <string name="sep_server">Server</string>
+    <string name="sep_client">Client</string>
+
+    <string name="sep_file">File</string>
+    <string name="sep_file_receiving">File receiving…</string>
+    <string name="sep_file_received">File received</string>
+    <string name="sep_file_to_send">File to send</string>
+    <string name="sep_file_sending">Sending file…</string>
+    <string name="sep_transfer">Progress</string>
+
+    <string name="txt_result_progress_not_started">…</string>
+    <string name="txt_result_progressing">progressing…</string>
+    <string name="txt_result_progress_done">done</string>
+    <string name="txt_result_progress_failed">failed</string>
+    <string name="txt_result_progress_aborted">aborted</string>
+
+    <string name="menu_send_title">Send</string>
+    <string name="menu_receive_title">Receive</string>
+    <string name="menu_info">Info</string>
+
+    <string name="frm_inner_address_wait_start">wait start</string>
+    <string name="frm_inner_ip_wait_connect">wait connection</string>
+    <string name="frm_outer_address">Address</string>
+
+    <string name="frm_inner_port">xxxxx</string>
+    <string name="frm_outer_port">Port</string>
+
+    <string name="frm_outer_file_name_select">File name</string>
+    <string name="frm_inner_file_name_select">select file</string>
+
+    <string name="lbl_file_name_wait">waiting incoming file name</string>
+    <string name="lbl_folder_name_wait">waiting incoming folder name</string>
+
+    <string name="lbl_folder_name">folder name</string>
+    <string name="lbl_file_name">file name</string>
+
+    <string name="transfer_max" translatable="false">100</string>
+    <string name="transfer_unit" translatable="false">%</string>
+    <string name="transfer_sep" translatable="false">/</string>
+
+    <array name="btn_server_start_txt">
+        <item>Start</item>
+        <item>Stop</item>
+    </array>
+    <array name="btn_server_start_img">
+        <item>@drawable/ic_confirm_24dp</item>
+        <item>@drawable/ic_cancel_24dp</item>
+    </array>
+
+    <array name="btn_server_search_start_txt">
+        <item>Start</item>
+        <item>Stop</item>
+    </array>
+    <array name="btn_server_search_start_img">
+        <item>@drawable/ic_confirm_24dp</item>
+        <item>@drawable/ic_cancel_24dp</item>
+    </array>
+
+    <array name="btn_receive_file_start_img">
+        <item>@drawable/ic_confirm_24dp</item>
+        <item>@drawable/ic_cancel_24dp</item>
+    </array>
+
+    <array name="btn_file_pick_img">
+        <item>@drawable/ic_dot3_24dp</item>
+        <item>@drawable/ic_file_24dp</item>
+    </array>
+    <array name="btn_file_pick_bg">
+        <item>@color/LightGray</item>
+        <item>@color/LightSteelBlue</item>
+    </array>
+
+    <array name="btn_flash_img">
+        <item>@drawable/ic_flash_off_24dp</item>
+        <item>@drawable/ic_flare_24dp</item>
+    </array>
+
+    <string name="lbl_banner_default">Buy the no ads version ;)</string>
+    <string name="btn_maybe_later">Maybe Later</string>
+    <string name="btn_buy">Buy</string>
+    <string name="chk_do_not_show_again">do not show again</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">Failed to complete purchase</string>
+
+</resources>
