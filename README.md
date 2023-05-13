@@ -15,3 +15,9 @@ This project has been done with the same lib than Crypter.
 - sync and build.
 
 If you don't understand the folder strutures you need to comply, look the crypter project first [crypter](https://github.com/tezov/crypter_and_lib).
+
+
+
+## What's powerful in there ?
+
+I thing nothing. That's just a good example that show how to user the socket package from my java lib.
