@@ -20,4 +20,4 @@ If you don't understand the folder strutures you need to comply, look the crypte
 
 ## What's powerful in there ?
 
-I thing nothing. That's just a good example that show how to user the socket package from my java lib.
+I think nothing. That's just a good example that show how to use the socket package from my java lib.
