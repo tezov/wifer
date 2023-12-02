@@ -534,20 +534,10 @@ private void stepTransferSucceed(Step previousStep){
     if(previousStep == Step.TRANSFER_FILE_SUCCEED){
         return;
     }
-    ActivityMain activityMain = (ActivityMain)getActivity();
-    activityMain.showInterstitial().observe(new ObserverStateE(this){
-        @Override
-        public void onComplete(){
-            stepTransferResult.setState(LedState.State.SUCCEED);
-            lblSepFile.setText(R.string.sep_file_received);
-            progressBarTransfer.setTitle(R.string.txt_result_progress_done);
-            btnOpenFile.setEnabled(true);
-        }
-        @Override
-        public void onException(Throwable e){
-            onComplete();
-        }
-    });
+    stepTransferResult.setState(LedState.State.SUCCEED);
+    lblSepFile.setText(R.string.sep_file_received);
+    progressBarTransfer.setTitle(R.string.txt_result_progress_done);
+    btnOpenFile.setEnabled(true);
 }
 
 private boolean canSearchServer(){

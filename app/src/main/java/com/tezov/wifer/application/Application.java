@@ -41,14 +41,10 @@ import static com.tezov.wifer.application.SharePreferenceKey.SP_SERVER_AUTO_STAR
 import static com.tezov.wifer.application.SharePreferenceKey.SP_SERVER_AUTO_STOP_BOOL;
 import static com.tezov.wifer.navigation.NavigationHelper.DestinationKey.INFO;
 
-import com.tezov.lib_java_android.ads.adMax.AdMaxInstance;
-
 public class Application extends com.tezov.lib_java_android.application.Application{
 public final static String SKU_NO_ADS = com.tezov.lib_java_android.application.AppContext.getResources().getString(R.string.billing_sku_no_ads);
 
 protected static ConnectivityHotSpotManager connectivityHotSpotManager = null;
-protected static AdMaxInstance adMob = null;
-
 public static void onMainActivityStart(ApplicationSystem app, Intent source, boolean isRestarted){
     com.tezov.lib_java_android.application.Application.onMainActivityStart(app, source, isRestarted);
     if(!isRestarted){
@@ -65,17 +61,12 @@ public static void onMainActivityStart(ApplicationSystem app, Intent source, boo
         }
         connectivityManager = new ConnectivityManager();
         connectivityHotSpotManager = new ConnectivityHotSpotManager();
-        adMob = new AdMaxInstance().onMainActivityStart(context);
     }
 }
 public static void onApplicationPause(ApplicationSystem app){
     com.tezov.lib_java_android.application.Application.onApplicationPause(app);
 }
 public static void onApplicationClose(ApplicationSystem app){
-    if(adMob != null){
-        adMob.clearPendings();
-        adMob = null;
-    }
     if(connectivityManager != null){
         connectivityManager.unregisterReceiver(true);
         connectivityManager = null;
@@ -106,9 +97,6 @@ private static void setDefaultSharePreference(){
 
 public static ConnectivityHotSpotManager connectivityHotSpotManager(){
     return connectivityHotSpotManager;
-}
-public static AdMaxInstance adMob(){
-    return adMob;
 }
 public static boolean isOwnedNoAds(){
     SharedPreferences sp = Application.sharedPreferences();

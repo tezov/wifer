@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.tezov.lib_java_android.ui.layout.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,39 +8,7 @@
     <include
         layout="@layout/tpl_activity_tbc_tbb"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/ad_view_banner_container"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent" />
 
-    <com.tezov.lib_java_android.ui.layout.FrameFlipperLayout
-        android:id="@+id/ad_view_banner_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:background="@color/colorPrimaryVariant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:visibility="visible">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ad_view_banner_default"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/ad_banner_height"
-            android:background="?attr/colorFaintDark">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal|center_vertical"
-                android:maxLines="1"
-                android:padding="?attr/dimPaddingElement_2"
-                android:text="@string/lbl_banner_default"
-                app:autoSizeMaxTextSize="@dimen/lbl_size_max_txt_banner_default"
-                app:autoSizeTextType="uniform"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.tezov.lib_java_android.ui.layout.FrameFlipperLayout>
-
-</com.tezov.lib_java_android.ui.layout.ConstraintLayout>
+</com.tezov.lib_java_android.ui.layout.FrameLayout>

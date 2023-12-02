@@ -530,22 +530,12 @@ private void stepTransferSucceed(Step previousStep){
     if(previousStep == Step.TRANSFER_FILE_SUCCEED){
         return;
     }
-    ActivityMain activityMain = (ActivityMain)getActivity();
-    activityMain.showInterstitial().observe(new ObserverStateE(this){
-        @Override
-        public void onComplete(){
-            stepTransferResult.setState(LedState.State.SUCCEED);
-            btnSelectFile.setEnabled(true);
-            frmFileName.setClickable(true);
-            frmFileName.setClickableIcon(true);
-            progressBarTransfer.setTitle(R.string.txt_result_progress_done);
-            lblSepFile.setText(R.string.sep_file_to_send);
-        }
-        @Override
-        public void onException(Throwable e){
-            onComplete();
-        }
-    });
+    stepTransferResult.setState(LedState.State.SUCCEED);
+    btnSelectFile.setEnabled(true);
+    frmFileName.setClickable(true);
+    frmFileName.setClickableIcon(true);
+    progressBarTransfer.setTitle(R.string.txt_result_progress_done);
+    lblSepFile.setText(R.string.sep_file_to_send);
 }
 private void stepTransferFailed(Step previousStep){
     if(previousStep == Step.TRANSFER_FILE_FAILED){

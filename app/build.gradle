@@ -1,57 +1,53 @@
 plugins {
     id 'com.android.application'
     id 'com.tezov.application'
-    id 'applovin-quality-service'
-}
-applovin {
-    apiKey "KItOJ8FevBgBg4rhB6RoorqrUKBK7i8LhwQVBO_KHtTXH26TqeEFp8J_0E8HBpozeG84Wq0sxLSWHT1fhqxW6u"
 }
 
 android {
-    compileSdkVersion 32
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
     defaultConfig {
         multiDexEnabled true
-        minSdkVersion 21
-        targetSdkVersion 32
+        compileSdk 33
+        minSdk 24
+        targetSdk 33
         resConfigs "en", "fr"
     }
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }
-//    signingConfigs {
-//        releaseConfig {
-//            def keystoreReleaseProperties = new Properties()
-//            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
-//            storeFile file(keystoreReleaseProperties.storeFile)
-//            storePassword keystoreReleaseProperties.storePassword
-//            keyAlias keystoreReleaseProperties.keyAlias
-//            keyPassword keystoreReleaseProperties.keyPassword
-//        }
-//        debugConfig {
-//            def keystoreDebugProperties = new Properties()
-//            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
-//            storeFile file(keystoreDebugProperties.storeFile)
-//            storePassword keystoreDebugProperties.storePassword
-//            keyAlias keystoreDebugProperties.keyAlias
-//            keyPassword keystoreDebugProperties.keyPassword
-//        }
-//    }
+    signingConfigs {
+        releaseConfig {
+            def keystoreReleaseProperties = new Properties()
+            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
+            storeFile file(keystoreReleaseProperties.storeFile)
+            storePassword keystoreReleaseProperties.storePassword
+            keyAlias keystoreReleaseProperties.keyAlias
+            keyPassword keystoreReleaseProperties.keyPassword
+        }
+        debugConfig {
+            def keystoreDebugProperties = new Properties()
+            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
+            storeFile file(keystoreDebugProperties.storeFile)
+            storePassword keystoreDebugProperties.storePassword
+            keyAlias keystoreDebugProperties.keyAlias
+            keyPassword keystoreDebugProperties.keyPassword
+        }
+    }
     buildTypes {
         release {
             shrinkResources true
             minifyEnabled true
-//            signingConfig signingConfigs.releaseConfig
+            signingConfig signingConfigs.releaseConfig
             debuggable false
         }
         debug {
             shrinkResources false
             minifyEnabled false
-//            signingConfig signingConfigs.debugConfig
+            signingConfig signingConfigs.debugConfig
         }
     }
     sourceSets {
@@ -94,13 +90,9 @@ configurations {
 }
 dependencies {
     api project(':lib_java_android')
-    implementation "com.android.billingclient:billing:4.1.0"
+    implementation "com.android.billingclient:billing:6.1.0"
 
     implementation "com.google.android.gms:play-services-ads-identifier:18.0.1"
-    implementation 'com.applovin:applovin-sdk:11.3.1'
-    implementation 'com.applovin.mediation:google-adapter:20.6.0.3'
-    implementation 'com.applovin.mediation:facebook-adapter:6.8.0.12'
-
 }
 tezov {
     debug {
@@ -117,24 +109,12 @@ tezov {
         applicationId = 'com.tezov.wifer'
     }
     version {
-        major = 1
+        major = 2
         minor = 0
-        patch = 31
+        patch = 1
     }
 }
 tezov.beforeVariant { buildType ->
-    def admax_id = "MW9zWmtiTNLWh7FWA61-3dno_Xzt24c9GS0IDeA5KWTnhMcUDrW_fQgMUdHrxS0IU5DWJSUGGuZqW4X1V1E7Rw"
-    def ad_banner_id = "c5d5dbc2809b8d96"
-    def ad_interstitial_id = "0b1f318d96583434"
-
-    def admob_id = "ca-app-pub-7343519600126304~7977329923"
-//    admob_banner = "ca-app-pub-7343519600126304/8987159268"
-//    admob_interstitial = "ca-app-pub-7343519600126304/5032775843"
-
-//    def admeta_id = "643408576955305"
-//    admeta_banner = "643408576955305_643409273621902"
-//    admeta_interstitial = "643408576955305_643409380288558"
-
     def billing_sku_no_ads = null
     def build = null
     if(buildType == DEBUG){
@@ -161,10 +141,5 @@ tezov.beforeVariant { buildType ->
 
     build.resValue "string", "billing_sku_no_ads", billing_sku_no_ads
 
-    build.manifestPlaceholders += [admax_id: admax_id]
-    build.resValue "string", "ad_banner_id", ad_banner_id
-    build.resValue "string", "ad_interstitial_id", ad_interstitial_id
-
-    build.manifestPlaceholders += [admob_id: admob_id]
 }
 

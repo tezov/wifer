@@ -28,12 +28,6 @@
         android:supportsRtl="false"
         android:theme="@style/ThemeApplication">
 
-        <meta-data android:name="applovin.sdk.key"
-            android:value="${admax_id}"/>
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="${admob_id}" />
-
         <meta-data
             android:name="com.tezov.lib.CONFIG"
             android:value="config_lib" />
